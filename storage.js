@@ -23,4 +23,10 @@ const userString = JSON.stringify(user);
 
 localStorage.setItem("user", JSON.stringify(user));
 
-// JSON.parse() - konverterar en JSON-sträng tillbaka till ett JavaScript-objekt  
+const userString = JSON.parse(localStorage.getItem("user"));
+
+console.log(user);
+
+// JSON.parse() - konverterar en JSON-sträng tillbaka till ett JavaScript-objekt   
+
+user.push("test");
