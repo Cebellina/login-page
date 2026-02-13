@@ -1,18 +1,23 @@
-const root = document.getElementById("root");
+// Skapar användare
+const user = {
+name: "test",
+password: "1234"
+};
 
-const header = document.createElement("header");
-
-
-const main = document.createElement("main");
-main.style.width = "800px";
-main.style.minHeight = "400px";
-main.style.backgroundColor = "white";
-main.style.borderRadius = "10px";
-
-const paragraph = document.createElement("p");
+localStorage.setItem("user", JSON.stringify(user));
 
 
+// Inloggning
+function login() {
+const inputName = document.getElementById("username").value;
+const inputPassword = document.getElementById("password").value;
+const storedUser = JSON.parse(localStorage.getItem("user"));
 
-
-console.log("Inloggningssidan har laddats!");
-
+if (inputName === storedUser.name && inputPassword === storedUser.password) {
+document.getElementById("message").textContent = "Inloggning lyckades!";
+} 
+    
+else {
+document.getElementById("message").textContent = "Fel användarnamn eller lösenord.";
+}
+}
