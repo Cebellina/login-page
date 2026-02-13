@@ -1,32 +1,31 @@
-localStorage.setItem("userName", "test");
-localStorage.setItem("userPassword", "1234");
-
-const userName = localStorage.getItem("userName");
-
-console.log(userName);
-
-// localStorage.removeItem("userName");
-localStorage.clear();
-
-console.log(localStorage.getItem("userName"));
-console.log(localStorage.getItem("userPassword"));
-
-
-// JSON.stringify() - konverterar ett JavaScript-objekt till en JSON-sträng
-
+// Skapa/spara användare 
 const user = {
-name: "test",
-password: "1234"
+    name: "test",
+    password: "1234"
 };
-
-const userString = JSON.stringify(user);
 
 localStorage.setItem("user", JSON.stringify(user));
 
-const userString = JSON.parse(localStorage.getItem("user"));
 
-console.log(user);
+// Hämta användare i localStorage 
+const storedUser = JSON.parse(localStorage.getItem("user"));
 
-// JSON.parse() - konverterar en JSON-sträng tillbaka till ett JavaScript-objekt   
+console.log("Användarnamn:", storedUser.name);
+console.log("Lösenord:", storedUser.password);
 
-user.push("test");
+
+// Uppdatera lösenord i localStorage 
+function updatePassword(newPassword) {
+const user = JSON.parse(localStorage.getItem("user"));
+
+if (!user) return;
+user.password = newPassword;
+localStorage.setItem("user", JSON.stringify(user));
+}
+
+
+// Testa uppdatering 
+updatePassword("5678");
+
+const updatedUser = JSON.parse(localStorage.getItem("user"));
+console.log("Uppdaterat lösenord:", updatedUser.password);
