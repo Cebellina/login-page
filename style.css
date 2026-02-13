@@ -1,29 +1,32 @@
 body {
-    background-color: rgb(255, 246, 214);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
+    display: flex;
     justify-content: center;
-    margin: 20px auto;
-    width: 150px;
+    margin-top: 50px;
 }
 
-
-.username, .password {
-    padding: 10px 20px;
-    cursor: pointer;
+.container {
+    width: 300px;
 }
 
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
 
-.btn {
-    background-color: rgb(25, 165, 175);
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 30px;
-}     
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
 
-.btn:hover {
-    background-color: rgb(175, 25, 92);
-    transition: background-color 0.3s ease;
+.hidden {
+    display: none;
+}
 
-}   
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+}

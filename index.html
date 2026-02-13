@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inloggningssida</title>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+   
+    <title>Inloggningssida</title>
+   
+    <script src="storage.js" defer></script>
+    <script src="script.js" defer></script>
+   
+    <link rel="index" href="index.html">
+    <link rel="storage" href="storage.html">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+<!-- Inloggning -->
+<div id="loginView">
+<h1>Logga in</h1>
 
-<h1>Välkommen till inloggningssidan!</h1>
+<input id="loginName" placeholder="Namn">
+<input id="loginPassword" type="password" placeholder="Lösenord">
 
-<form id="loginForm">
-    <label for="username">Användarnamn:</label>
-    <input type="text" class="username" name="username" required><br><br>
-  
-    <label for="password">Lösenord:</label>
-    <input type="password" class="password" name="password" required><br><br>
-    
-    <button type="submit" class="btn">Logga in</button>
-</form>
+<button onclick="login()">Logga in</button>
+<p>Har du inget konto?</p>
+<button onclick="showRegister()">Registrera</button>
 
+</div>
 
+<script src="script.js"></script>
+<script src="storage.js"></script>
 
 </body>
 </html> 
