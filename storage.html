@@ -2,35 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-
-<title>Inloggningsuppgifter</title>
-
-<script src="script.js" defer></script>
-<script src="storage.js" defer></script>
-
-<link rel="stylesheet" href="style.css">
-
+<title>Storage Setup</title>
 </head>
-
 <body>
 
 <script>
 if (!localStorage.getItem("users")) {
-const users = [ {
-name: "test",
-password: "1234"
-}];
 
-localStorage.setItem("users", JSON.stringify(users));
+    const users = [
+        {
+            name: "test",
+            password: "1234"
+        }
+    ];
+
+    localStorage.setItem("users", JSON.stringify(users));
 }
 
 alert("LocalStorage är redo.");
 </script>
-
-
-<script src="script.js"></script>
-<script src="storage.js"></script>
 
 </body>
 </html>

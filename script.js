@@ -1,9 +1,9 @@
-// ===== INIT =====
+// Sparar användardata i localStorage
 if (!localStorage.getItem("users")) {
     localStorage.setItem("users", JSON.stringify([]));
 }
 
-// ===== VIEW HELPERS =====
+// Inloggningssida
 function showLogin() {
     loginView.classList.remove("hidden");
     registerView.classList.add("hidden");
@@ -23,7 +23,7 @@ function showWelcome(user) {
     welcomeText.textContent = "Du är inloggad som: " + user.name;
 }
 
-// ===== REGISTER =====
+// Registrering
 function register() {
 
     const name = registerName.value.trim();
@@ -50,7 +50,7 @@ function register() {
     showLogin();
 }
 
-// ===== LOGIN =====
+// Inloggning
 function login() {
 
     const name = loginName.value.trim();
@@ -71,13 +71,13 @@ function login() {
     showWelcome(user);
 }
 
-// ===== LOGOUT =====
+// Utloggning
 function logout() {
     localStorage.clear();
     showLogin();
 }
 
-// ===== AUTO LOGIN =====
+// Andvändardata i localStorage
 function checkLogin() {
 
     const user = JSON.parse(localStorage.getItem("loggedInUser"));
