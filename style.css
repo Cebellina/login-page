@@ -12,19 +12,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #f7d6e0, #e6d6db, #ff9dbe);
+    background: linear-gradient(135deg, #fdf1d0, #f9e1a7, #ffe5b4);
 }
 
 #app {
     backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 241, 200, 0.8);
     border-radius: 28px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.2), inset 0 0 15px rgba(255,255,255,0.2);
-    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2), inset 0 0 15px rgba(255,255,255,0.25);
+    border: 1px solid rgba(255,255,200,0.4);
 }
 
 h1 {
-    background: linear-gradient(45deg, #e6a4b4, #f2c6cf, #d9d9d9, #cfa5b4);
+    background: linear-gradient(45deg, #f5d88e, #fce5b4, #f7d88e, #f9e1a7);
     letter-spacing: 2px;
     margin: 20px 0;
 }
@@ -34,7 +34,7 @@ input {
     padding: 12px 14px;
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,0.1);
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,250,220,0.7);
     color: #333;
     outline: none;
     transition: 0.3s ease;
@@ -45,8 +45,8 @@ input::placeholder {
 }
 
 input:focus {
-    border: 1px solid #e6a4b4;
-    box-shadow: 0 0 10px rgba(230, 164, 180, 0.5);
+    border: 1px solid #f2c97c;
+    box-shadow: 0 0 10px rgba(242,201,124,0.5);
 }
 
 button {
@@ -60,15 +60,13 @@ button {
     cursor: pointer;
     transition: 0.35s ease;
     color: #333;
-    /* Rosé metallic gradient */
-    background: linear-gradient(45deg, #e6a4b4, #f2c6cf, #d9d9d9);
+    background: linear-gradient(45deg, #f5d88e, #fce5b4, #f7d88e);
     box-shadow: 0 4px 15px rgba(0,0,0,0.25);
 }
 
-/* Hover effekt */
 button:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(230, 164, 180, 0.5);
+    box-shadow: 0 8px 25px rgba(242,201,124,0.5);
 }
 
 button:active {
@@ -78,12 +76,12 @@ button:active {
 #message {
     margin-top: 12px;
     font-size: 18px;
-    color: #cc5c7a;
+    color: #b88500;
 }
 
 #welcomeText {
     margin-bottom: 20px;
-    color: #444;
+    color: #555;
     font-size: 26px;
 }
 
@@ -91,7 +89,6 @@ button:active {
     display: none;
 }
 
-/* Responsiv design */
 @media (max-width: 400px) {
     #app {
         width: 85%;
