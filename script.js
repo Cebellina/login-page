@@ -2,13 +2,17 @@ const root = document.getElementById("root");
 
 const header = document.createElement("header");
 
-const img = document.createElement("img");
-img.src = "images/img.png";
-img.classList.add("img");
+
+const main = document.createElement("main");
+main.style.width = "800px";
+main.style.minHeight = "400px";
+main.style.backgroundColor = "white";
+main.style.borderRadius = "10px";
+
+const paragraph = document.createElement("p");
 
 
 
-header.appendChild(img);
-root.appendChild(header);
 
-console.log("Scriptet har laddats och körts!");
+console.log("Inloggningssidan har laddats!");
+
