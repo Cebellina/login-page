@@ -2,11 +2,13 @@ const root = document.getElementById("root");
 
 const header = document.createElement("header");
 
-const logo = document.createElement("h1");
-logo.innerText = "img.png";
-logo.classList.add("img");
+const img = document.createElement("img");
+img.src = "images/img.png";
+img.classList.add("img");
 
 
 
-header.appendChild(logo);
+header.appendChild(img);
 root.appendChild(header);
+
+console.log("Scriptet har laddats och körts!");
